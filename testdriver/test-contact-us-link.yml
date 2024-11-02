@@ -1,0 +1,72 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Contact sales".
+    commands:
+      - command: hover-text
+        text: Contact sales
+        description: button to contact sales
+        action: click
+  - prompt: Assert that a contact form or contact options are presented.
+    commands:
+      - command: assert
+        expect: the contact form is visible
+  - prompt: Complete the contact form and submit.
+    commands:
+      - command: hover-text
+        text: First Name
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last Name
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email Address
+        description: email address field
+        action: click
+      - command: type
+        text: john.doe@example.com
+      - command: hover-text
+        text: Company Name
+        description: company name field
+        action: click
+      - command: type
+        text: Example Corp
+      - command: hover-text
+        text: Use Case
+        description: use case dropdown
+        action: click
+      - command: type
+        text: General Inquiry
+      - command: hover-text
+        text: Country
+        description: country dropdown
+        action: click
+      - command: type
+        text: United States
+      - command: hover-text
+        text: Message
+        description: message field
+        action: click
+      - command: type
+        text: Interested in learning more about your services.
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the contact form and submit.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
+  - prompt: Complete the contact form and submit.
+    commands:
+      - command: hover-text
+        text: Submit
+        description: submit button
+        action: click
