@@ -1,0 +1,28 @@
+version: 4.0.79
+steps:
+  - prompt: Assert that a cookie consent banner appears at the bottom of the page.
+    commands:
+      - command: assert
+        expect: a cookie consent banner appears at the bottom of the page
+      - command: scroll
+        direction: down
+  - prompt: Click "Accept" or the equivalent consent button.
+    commands:
+      - command: hover-text
+        text: Accept Cookies
+        description: cookie consent button at the bottom of the page
+        action: click
+  - prompt: Click "Accept" or the equivalent consent button.
+    commands:
+      - command: hover-text
+        text: Accept Cookies
+        description: cookie consent button at the bottom of the page
+        action: click
+  - prompt: Click "Accept" or the equivalent consent button.
+    commands:
+      - command: focus-application
+        name: Google Chrome
+      - command: hover-text
+        text: Accept Cookies
+        description: cookie consent button at the bottom of the page
+        action: click
