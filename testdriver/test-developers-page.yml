@@ -1,0 +1,22 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Developers".
+    commands:
+      - command: hover-text
+        text: Developers
+        description: link in the header
+        action: click
+  - prompt: Assert that resources for developers are displayed.
+    commands:
+      - command: assert
+        expect: PubNub for Developers heading is visible
+  - prompt: >-
+      Navigate to one resource and assert that comprehensive details are
+      available.  # Use the content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Documentation
+        description: link under Developers menu
+        action: click
+      - command: assert
+        expect: Detailed documentation content is visible
