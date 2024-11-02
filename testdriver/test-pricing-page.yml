@@ -1,0 +1,24 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Pricing".
+    commands:
+      - command: hover-text
+        text: Pricing
+        description: link in the header
+        action: click
+  - prompt: Assert that a pricing table or plan options are visible.
+    commands:
+      - command: assert
+        expect: pricing table or plan options are visible
+  - prompt: Try to purchase or sign-up for the cheapest plan.
+    commands:
+      - command: hover-text
+        text: Create an Account
+        description: button under Platform Free plan
+        action: click
+  - prompt: >-
+      Assert that a confirmation or payment page is shown.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: confirmation or payment page is shown
