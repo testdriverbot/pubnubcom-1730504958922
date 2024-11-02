@@ -1,0 +1,22 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Solutions".
+    commands:
+      - command: hover-text
+        text: Solutions
+        description: link in the header
+        action: click
+  - prompt: Assert that a list of solutions or services is displayed.
+    commands:
+      - command: assert
+        expect: a list of solutions or services is displayed
+  - prompt: >-
+      Select one solution and assert that detailed information is shown.  # Use
+      the content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Chat
+        description: solution option under Solutions menu
+        action: click
+      - command: assert
+        expect: detailed information about Chat solution is displayed
