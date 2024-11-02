@@ -1,0 +1,21 @@
+version: 4.0.79
+steps:
+  - prompt: Click on the search icon near the top right.
+    commands:
+      - command: hover-image
+        description: search icon near the top right
+        action: click
+  - prompt: Type "API" in the search bar.
+    commands:
+      - command: hover-text
+        text: Search or ask anything
+        description: search bar
+        action: click
+      - command: type
+        text: API
+  - prompt: >-
+      Assert that relevant search results are displayed.  # Use the content of
+      the file from the environment
+    commands:
+      - command: assert
+        expect: PubNub REST API is displayed in the search results
