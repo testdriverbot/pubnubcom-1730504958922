@@ -1,0 +1,22 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Resources".
+    commands:
+      - command: hover-text
+        text: Resources
+        description: link in the header
+        action: click
+  - prompt: Assert that a list of resources or articles is visible.
+    commands:
+      - command: assert
+        expect: a list of resources is visible
+  - prompt: >-
+      Access one resource and assert that the full content is readable.  # Use
+      the content of the file from the environment
+    commands:
+      - command: hover-text
+        text: Guides
+        description: link under Resources
+        action: click
+      - command: assert
+        expect: the full content of the guide is readable
