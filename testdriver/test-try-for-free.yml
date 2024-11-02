@@ -1,0 +1,68 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Try for free".
+    commands:
+      - command: hover-text
+        text: Try for free
+        description: button in the header
+        action: click
+  - prompt: Assert that a sign-up or free trial form appears.
+    commands:
+      - command: assert
+        expect: the text "Register for free" is visible
+  - prompt: Complete the form using test data.
+    commands:
+      - command: assert
+        expect: a sign-up or free trial form is visible
+  - prompt: Complete the form using test data.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: Test
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: TestPassword123
+  - prompt: Complete the form using test data.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: Test
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: User
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: testuser@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: TestPassword123
