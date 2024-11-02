@@ -1,0 +1,102 @@
+version: 4.0.79
+steps:
+  - prompt: Click on "Start Building".
+    commands:
+      - command: hover-text
+        text: Start Building
+        description: button to start building
+        action: click
+  - prompt: Assert that a sign-up form or onboarding process is initiated.
+    commands:
+      - command: assert
+        expect: a sign-up form is displayed
+  - prompt: Complete the onboarding process.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: SecurePass123
+      - command: hover-text
+        text: Register
+        description: register button
+        action: click
+  - prompt: Complete the onboarding process.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: SecurePass123
+      - command: hover-text
+        text: Register
+        description: register button
+        action: click
+  - prompt: Complete the onboarding process.
+    commands:
+      - command: hover-text
+        text: First name
+        description: first name field
+        action: click
+      - command: type
+        text: John
+      - command: hover-text
+        text: Last name
+        description: last name field
+        action: click
+      - command: type
+        text: Doe
+      - command: hover-text
+        text: Email
+        description: email field
+        action: click
+      - command: type
+        text: johndoe@example.com
+      - command: hover-text
+        text: Password
+        description: password field
+        action: click
+      - command: type
+        text: SecurePass123
+      - command: hover-text
+        text: Register
+        description: register button
+        action: click
